@@ -1,6 +1,5 @@
 import HeaderBox from '@/components/HeaderBox/HeaderBox';
 import TotalBalanceBox from '@/components/TotalBalanceBox/TotalBalanceBox';
-import React from 'react'
 
 const Home = () => {
     const loggedIn = {

@@ -1,6 +1,3 @@
-import React from 'react'
-import './HeaderBox.css';
-
 const HeaderBox = (
     {
         type = "title",
