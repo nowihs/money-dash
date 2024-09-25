@@ -1,9 +1,12 @@
 import HeaderBox from '@/components/HeaderBox/HeaderBox';
 import TotalBalanceBox from '@/components/TotalBalanceBox/TotalBalanceBox';
+import RightSidebar from '@/components/RightSidebar/RightSidebar';
 
 const Home = () => {
     const loggedIn = {
-        firstName: 'Shi Won'
+        firstName: 'Shi Won',
+        lastName: 'Lee',
+        email: 'shi.won.lee@crateofhemp.com'
     };
 
     return (
@@ -23,7 +26,15 @@ const Home = () => {
                         totalCurrentBalance={1250.45}
                     />
                 </header>
+
+                Recent Transactions Here
             </div>
+
+            <RightSidebar
+                user={loggedIn}
+                transactions={[]}
+                banks={[ {}, {} ]}
+            />
         </section>
     )
 }
