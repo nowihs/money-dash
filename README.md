@@ -1,3 +1,3 @@
 # money-dash
 
-TBD
+To be written.
