@@ -52,7 +52,7 @@ const AuthForm = ({ type }: { type: string }) => {
                         height={34}
                         alt="Money Dash Logo"
                     />
-                    <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
+                    <h1 className="text-26 font-sen font-bold text-black-1">
                         Money Dash
                     </h1>
                 </Link>

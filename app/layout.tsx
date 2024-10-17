@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Serif } from "next/font/google";
+import { Inter, IBM_Plex_Serif, Sen } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,6 +11,12 @@ const ibmPlexSerif = IBM_Plex_Serif({
     subsets: ['latin'],
     weight: ['400', '700'],
     variable: '--font-ibm-plex-serif'
+});
+
+const senFont = Sen({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700', '800'],
+    variable: '--font-sen'
 });
 
 export const metadata: Metadata = {
@@ -28,7 +34,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${ibmPlexSerif.variable}`}>
+            <body className={`${inter.variable} ${ibmPlexSerif.variable} ${senFont.variable}`}>
                 {children}
             </body>
         </html>
