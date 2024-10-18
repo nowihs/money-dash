@@ -21,7 +21,7 @@ const Sidebar = ({ user }: SidebarProps) => {
                         className="size-[24px] max-xl:size-14"
                     />
                     <h1 className="sidebar-logo font-sen font-bold">
-                        Money Dash
+                        $MoneyDash
                     </h1>
                 </Link>
                 {sidebarLinks.map((item) => {

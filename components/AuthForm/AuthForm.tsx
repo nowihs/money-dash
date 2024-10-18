@@ -19,9 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-    username: z.string().min(2, {
-        message: "Username must be at least 2 characters.",
-    }),
+    email: z.string().email(),
 });
 
 const AuthForm = ({ type }: { type: string }) => {
@@ -31,7 +29,7 @@ const AuthForm = ({ type }: { type: string }) => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            username: "",
+            email: "",
         },
     });
 
@@ -53,11 +51,11 @@ const AuthForm = ({ type }: { type: string }) => {
                         alt="Money Dash Logo"
                     />
                     <h1 className="text-26 font-sen font-bold text-black-1">
-                        Money Dash
+                        $MoneyDash
                     </h1>
                 </Link>
                 <div className="flex flex-col gap-1 md:gap-3">
-                    <h1 className="text-24 lg:text-36 font-semibold text-gray-900">
+                    <h1 className="text-24 lg:text-36 font-sen font-semibold text-gray-900">
                         {user
                             ? 'Link Account'
                             : type === 'sign-in'
@@ -82,21 +80,26 @@ const AuthForm = ({ type }: { type: string }) => {
                 : (
                     <>
                         <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 font-sen">
                                 <FormField
                                     control={form.control}
-                                    name="username"
+                                    name="email"
                                     render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>Username</FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="Username or Email" {...field} />
-                                            </FormControl>
-                                            <FormDescription>
-                                                This is your public display name.
-                                            </FormDescription>
-                                            <FormMessage />
-                                        </FormItem>
+                                        <div className="form-item">
+                                            <FormLabel className='form-label'>Email</FormLabel>
+                                            <div className="flex w-full flex-col">
+                                                <FormControl>
+                                                    <Input
+                                                        placeholder="Enter your email"
+                                                        className="input-class"
+                                                        {...field}
+                                                    />
+                                                </FormControl>
+                                                <FormMessage
+                                                    className="form-message mt-2"
+                                                />
+                                            </div>
+                                        </div>
                                     )}
                                 />
                                 <Button type="submit">Submit</Button>

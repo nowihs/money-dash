@@ -42,7 +42,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                             alt="Money Dash Logo"
                         />
                         <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">
-                            Money Dash
+                            $MoneyDash
                         </h1>
                     </Link>
                     <div className="mobilenav-sheet">

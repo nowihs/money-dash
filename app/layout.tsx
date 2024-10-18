@@ -20,7 +20,7 @@ const senFont = Sen({
 });
 
 export const metadata: Metadata = {
-    title: "Money Dash",
+    title: "$MoneyDash",
     description: "Money Dash is a proof-of-concept banking platform for organizing all your finances in one app",
     icons: {
         icon: '/icons/logo.svg'
