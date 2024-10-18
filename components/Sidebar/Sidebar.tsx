@@ -20,7 +20,7 @@ const Sidebar = ({ user }: SidebarProps) => {
                         alt="Money Dash Logo"
                         className="size-[24px] max-xl:size-14"
                     />
-                    <h1 className="sidebar-logo">
+                    <h1 className="sidebar-logo font-sen font-bold">
                         Money Dash
                     </h1>
                 </Link>
