@@ -20,8 +20,8 @@ const Sidebar = ({ user }: SidebarProps) => {
                         alt="Money Dash Logo"
                         className="size-[24px] max-xl:size-14"
                     />
-                    <h1 className="sidebar-logo">
-                        Money Dash
+                    <h1 className="sidebar-logo font-sen font-bold">
+                        $MoneyDash
                     </h1>
                 </Link>
                 {sidebarLinks.map((item) => {
